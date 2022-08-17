@@ -4,5 +4,23 @@
     "express": "^4.18.1",
     "mysql2": "^2.3.3",
     "path": "^0.12.7"
-  }
+  },
+  "name": "tp1-grupo8",
+  "description": "��#\u0000 \u0000p\u0000w\u0000a\u0000-\u0000t\u0000p\u00001\u0000-\u0000g\u0000r\u0000u\u0000p\u0000o\u00008\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VickSottile/pwa-tp1-grupo8.git"
+  },
+  "author": "grupo8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VickSottile/pwa-tp1-grupo8/issues"
+  },
+  "homepage": "https://github.com/VickSottile/pwa-tp1-grupo8#readme"
 }
