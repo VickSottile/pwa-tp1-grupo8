@@ -15,9 +15,10 @@ const selectContacto = (req,resp) => {
     .from ('users')
     .then((response)=>{
         for(row of response){
-            console.log(`${nombre} - ${barrio} - ${consulta}`);
+            console.log(`${row['nombre']} - ${row['barrio']} - ${row['consulta']}`);
         }
         //Aqui tendriamos que renderizar
+        res.send('te muestro los productos');
     });
     .catch((err)=>{
         console.log(`${err}`);
