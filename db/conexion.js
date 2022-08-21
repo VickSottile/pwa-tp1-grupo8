@@ -18,6 +18,7 @@ knex.schema.hasTable('contactos').then(function(exists) {
         t.string('apellido', 100);
         t.string('telefono', 100);
         t.string('mail', 100);
+        t.text('consulta');
       });
     }
   });
