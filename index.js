@@ -16,7 +16,7 @@ const routesContactos=require('./routes/routerContactos'); //crea la variable ro
 
 
 //Rutas
-app.use('api/contactos', routesContactos);
+app.use('/api/contactos', routesContactos);
 
 app.get('/', (req,res)=>{
     res.send('Buenas! Llegaste a la app de Contactos');
