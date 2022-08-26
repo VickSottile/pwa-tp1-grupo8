@@ -1,25 +1,16 @@
 
-const knex = require('knex')({
-    client: 'mysql2',
-    connection: {
-      host : '127.0.0.1',
-      port : 3306,
-      user : 'AGUS',
-      password : 'grupo8',
-      database : 'GENTE'
-    }
-  });
+const Mongo = require('mongodb').MongoClient;
+const URL = 'mongodb://127.0.0.1:27017/Sprint2'; //si no existe la crea
 
-knex.schema.hasTable('contactos').then(function(exists) {
-    if (!exists) {
-      return knex.schema.createTable('contactos', function(t) {
-        t.increments('id').primary();
-        t.string('nombre', 100);
-        t.string('apellido', 100);
-        t.string('telefono', 100);
-        t.string('mail', 100);
-      });
-    }
-  });
 
-  module.exports = knex;
+Mongo.connect(URL, (error, db) => {
+    if (error) throw error;
+
+    const dbo=db.db('Sprint2');
+    dbo.createCollection('contactos',(err,collection)=>{
+        if(error) throw error;
+    
+    console.log('Coleccion de Datos Creada');
+    db.close();
+})
+});
